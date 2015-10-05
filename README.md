@@ -3,17 +3,11 @@
 TinyWFL is a minimal web font loader which uses a similar approach to Google's
 and Typekit's [webfontloader](https://github.com/typekit/webfontloader/) to
 help you avoid the FOUT (flash of unstyled text), except it does a lot less so
-it can stay tiny.
+it can stay tiny - it is 95% smaller, at just 852 bytes.
 
 TinyWFL will set CSS styles on your ``<html>`` tag when your fonts have loaded,
 and call an optional callback function if you want to know about it in
 JavaScript. It it self-contained and has no dependencies.
-
-TinyWFL will not generate CSS to load your fonts for you, it doesn't fire
-custom events, it won't make any attempt to help you load your fonts in an
-iframe, and may not work as well for certain edge cases. It doesn't try to do
-all things for all people like webfontloader - but that's ok, because TinyWFL
-is 95% smaller, at just 852 bytes.
 
 Version 1.0.0
 
@@ -113,8 +107,8 @@ For more information about TinyWFL and why it exists, see the blog post
 ## Contributing
 
 Contributions are welcome, preferably via pull request. However, given the
-focus of the project is to be as small as possible, small pull requests to fix
-bugs are preferred to large additions to support new features.
+focus of the project is to be as small as possible, bug fixes are preferred,
+rather than new features.
 
 ### Credits
 
