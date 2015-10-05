@@ -2,12 +2,13 @@
 
 TinyWFL is a minimal web font loader which uses a similar approach to Google's
 and Typekit's [webfontloader](https://github.com/typekit/webfontloader/) to
-help you avoid the FOUT (flash of unstyled text), except it does a lot less so
-it can stay tiny - it is 95% smaller, at just 852 bytes.
+help you avoid the FOIT (flash of invisible text) and FOUT (flash of unstyled
+text), except it does a lot less so it can stay tiny - it is 95% smaller, at
+just 852 bytes.
 
 TinyWFL will set CSS styles on your ``<html>`` tag when your fonts have loaded,
 and call an optional callback function if you want to know about it in
-JavaScript. It it self-contained and has no dependencies.
+JavaScript. It is self-contained and has no dependencies.
 
 Version 1.0.0
 
@@ -26,8 +27,8 @@ Version 1.0.0
    
    This code could go anywhere in your page, but TinyWFL will work best if this
    happens in the ``<head>`` - that way it can immediately disable your web
-   fonts and try to re-enable them while the rest of the page loads,
-   eliminating FOUT altogether.
+   fonts and try to re-enable them while the rest of the page loads, hopefully
+   eliminating FOIT/FOUT altogether.
 
 2. Now define your ``@font-face`` in CSS, using the font-face definition as
    supplied with your web font:
@@ -71,6 +72,7 @@ You can also take actions when JavaScript loads by passing a callback function:
 The callback function will be called each time a font is loaded. If you need to
 know which font was loaded, check the first argument:
 
+    // Example callback function
     function resizeDoc(fontName) {
         resizeHeader();
         if (fontName === 'Open Sans') {
@@ -107,8 +109,8 @@ For more information about TinyWFL and why it exists, see the blog post
 ## Contributing
 
 Contributions are welcome, preferably via pull request. However, given the
-focus of the project is to be as small as possible, bug fixes are preferred,
-rather than new features.
+focus of the project is to be as small as possible, bug fixes are preferred
+to new features.
 
 ### Credits
 
